@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Digital Notice Board</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+            background-color: #6bade7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            color: #083c71;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .terms {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+        .terms a {
+            color: #05375e;
+            text-decoration: none;
+        }
+        .signup-footer {
+            color: #022136;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .signup-footer a {
+            color: #022136;
+            text-decoration: none;
+        }
+        .submit{
+            color: #022136;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2> Digital Notice Board</h2>
+        <form action="landingpage.html" method="POST">
+            <div>
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div>
+                <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+            </div>
+            <div>
+                <input type="checkbox" name="terms" required>
+                <label for="terms">I agree to the <a href="SIGN UP(terms and conditions).html">terms and conditions</a></label>
+            </div>
+            <div>
+                <a href="landingpage.html">
+                <input type="submit" value="Sign Up">
+            </a>
+            </div>
+        </form>
+
+        <div class="signup-footer">
+            <p>Already have an account? <a href="LOGIN PAGE.html">Login here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

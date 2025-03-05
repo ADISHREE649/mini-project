@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Notice Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #333;
+}
+
+.notice {
+    margin: 20px;
+}
+
+.button {
+    font-size: 1em;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 500ms, visibility 500ms;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.popup .close:hover {
+    color: #007BFF;
+}
+
+.popup .content {
+    max-height: 300px;
+    overflow: auto;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Digital Notice Board</h1>
+    <div class="notice">
+        <a class="button" href="#popup1">Important Update</a>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Important Update</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                Please be informed that the system will undergo maintenance on March 5th from 2:00 AM to 4:00 AM.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

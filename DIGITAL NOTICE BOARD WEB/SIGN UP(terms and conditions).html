@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .terms-content {
+            max-height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #fafafa;
+        }
+        .accept {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:disabled {
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Terms & Conditions</h1>
+        <div class="terms-content">
+            <p>Welcome to our website. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions...</p>
+            <p><strong>1. Acceptance of Terms</strong><br>By using this website, you agree to these terms. If you do not agree, please do not use our site.</p>
+            <p><strong>2. Privacy Policy</strong><br>We value your privacy and protect your personal data...</p>
+            <p><strong>3. Limitation of Liability</strong><br>We are not liable for any damages resulting from your use of this website...</p>
+            <p>... (Add more terms as necessary) ...</p>
+        </div>
+        <div class="accept">
+            <input type="checkbox" id="agree" onclick="toggleButton()">
+            <label for="agree"> I accept the Terms & Conditions</label>
+        </div>
+        <button id="submitBtn" disabled>Continue</button>
+    </div>
+
+    <script>
+        function toggleButton() {
+            document.getElementById("submitBtn").disabled = !document.getElementById("agree").checked;
+        }
+    </script>
+</body>
+</html>
